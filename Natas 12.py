@@ -44,4 +44,4 @@ if "has been uploaded" in str(soup.body):
     natas13_pass = resp.text.replace("GIF87a", "").strip()
     print(f"Natas 13: {natas13_pass}")
 else:
-	print("Error Occurred")
+    print("Error Occurred")
