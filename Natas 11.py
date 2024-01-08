@@ -11,13 +11,13 @@ from colorama import Fore, Style
 colorama.init(autoreset=False)
 print(Fore.LIGHTBLUE_EX, Style.BRIGHT)
 
-rep_list = {'<br/>': '\n', '&nbsp;': ' ', '&amp;': '&'}
-
 
 # Set the username and password for authentication
 username = 'natas11'
 password = '1KFqoJXi6hRaPluAmk8ESDW4fSysRoIg'
 
+
+# Set the cookie to get the password for the new level
 cookie = {"data": "MGw7JCQ5OC04PT8jOSpqdmk3LT9pYmouLC0nICQ8anZpbS4qLSguKmkz"}
 
 
