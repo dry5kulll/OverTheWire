@@ -18,8 +18,6 @@ rep_list = {'<br/>': '\n', '&nbsp;': ' ', '&amp;': '&'}
 username = 'natas11'
 password = '1KFqoJXi6hRaPluAmk8ESDW4fSysRoIg'
 
-# key = "KNHL"
-
 cookie = {"data": "MGw7JCQ5OC04PT8jOSpqdmk3LT9pYmouLC0nICQ8anZpbS4qLSguKmkz"}
 
 
