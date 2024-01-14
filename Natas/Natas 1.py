@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Vulnerability: Sensitive information disclosure in the source code
 
 import requests
