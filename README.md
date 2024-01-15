@@ -5,15 +5,15 @@ To find out more about a certain wargame, just visit its page linked from the me
 
 ## Suggested order to play the games in
 * Bandit
-2. Leviathan or Natas or Krypton
-3. Narnia
-4. Behemoth
-Utumno
-Maze
-Vortex
-Manpage
-Drifter
-FormulaOne
+* Leviathan or Natas or Krypton
+* Narnia
+* Behemoth
+* Utumno
+* Maze
+* Vortex
+* Manpage
+* Drifter
+* FormulaOne
 
 ## Each shell game has its own SSH port
 
