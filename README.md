@@ -4,10 +4,10 @@ The wargames offered by the OverTheWire community can help you to learn and prac
 To find out more about a certain wargame, just visit its page linked from the menu on the left.
 
 ## Suggested order to play the games in
-Bandit
-Leviathan or Natas or Krypton
-Narnia
-Behemoth
+1. Bandit
+2. Leviathan or Natas or Krypton
+3. Narnia
+4. Behemoth
 Utumno
 Maze
 Vortex
