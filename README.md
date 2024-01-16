@@ -15,7 +15,7 @@ To get started, follow the suggested order for playing the games:
 7. [Vortex](https://overthewire.org/wargames/vortex/)
 8. [Manpage](https://overthewire.org/wargames/manpage/)
 9. [Drifter](https://overthewire.org/wargames/drifter/)
-10. [FormulaOne](https://overthewire.org/wargames/formula/)
+10. [FormulaOne](https://overthewire.org/wargames/formulaone/)
 
 ## Connecting to the Games
 
