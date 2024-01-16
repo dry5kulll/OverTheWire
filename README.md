@@ -1,6 +1,7 @@
 # Welcome to OverTheWire Wargames
 
-Explore and enhance your cybersecurity skills through the exciting wargames provided by the OverTheWire community. These games offer an engaging and hands-on approach to learning various security concepts. Each wargame presents a unique challenge, making the learning experience both educational and enjoyable.
+Explore and enhance your cybersecurity skills through the exciting wargames provided by the [OverTheWire](https://overthewire.org/wargames/) community. These games offer an engaging and hands-on approach to learning various security concepts. Each wargame presents a unique challenge, making the learning experience both educational and enjoyable.
+
 
 ## Getting Started
 
