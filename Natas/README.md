@@ -6,7 +6,7 @@ The objective of each level is to obtain the password for the next level and pro
 
 ## Getting Started
 Start with the first level:
-**Username:** natas0
+- **Username:** natas0
 - **Password:** natas0
 - **URL:** [http://natas0.natas.labs.overthewire.org](http://natas0.natas.labs.overthewire.org)
 
