@@ -14,7 +14,5 @@ The game is organized into levels, starting from Level 0. Your goal is to "beat"
 
 You're all set to start your journey! Begin with [Level 0](#), linked on the left side of this page. Good luck!
 
-## Note for VM Users
 
-If you are using a virtual machine (VM) and face issues connecting to overthewire.org via SSH with a "broken pipe error" when the network adapter is set to NAT mode, add the setting `IPQoS throughput` to `/etc/ssh/ssh_config` to resolve the issue. If the problem persists, consider changing the adapter to Bridged mode.
-
+## Solutions
