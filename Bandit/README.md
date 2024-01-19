@@ -62,66 +62,88 @@ To begin your journey with Level 0, log in via SSH using the following command:
 * Explanation: This level involves a filename with spaces. Use either of the provided commands to display the contents of the file & obtain the password for Level 3.
 
 ### Level 3
+* `ls -la inhere/`
 * `cat inhere/.hidden`
-* Explanation: 
+* Explanation: The filename starts with a dot therefore it is hidden. To list the file use the -a option in the ls command. Read the content of the file by cat command & get the password for the next level.
 
 ### Level 4
 lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 * `file ./inhere/`
 * `cat ./inhere/-file07`
-* Explanation: 
+* Explanation: There are multiple files, therefore use the file command to check the file type of each files in the directory. Read the content of the file whose file type is ASCII Text & get the password for the next level.
 
 ### Level 5
-
-
+* `find . -type f -size 1033c`
+* Explanation: As per the given description, the file size is 1033 bytes, thus use the find command to find all the files whose size is 1033 bytes & get the password for the next level.
 
 ### Level 6
-
+* `find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null `
+* Explanation: As per the given description, use the find command with different flag to find the file & get the password for the next level.
 
 ### Level 7
-
+* `cat data.txt | grep millionth`
+* Explanation: Use the grep command to extract the line that contains the word "millionth" & get the password for the next level.
 
 ### Level 8
-
+* `cat data.txt | sort | uniq -c`
+* Explanation: Sort the file & list the number of occurances of each line using the uniq command. The line which has 1 written before it occurs only once in the file & that is the password for the next level.
 
 ### Level 9
-
+* `cat data.txt | strings`
+* Explanation: Using strings extract the readable characters from the file & get the password for the next level.
 
 ### Level 10
-
+* `cat data.txt  | base64 -d`
+* Explanation: Decode the contents of the file using Base64 & get the password for the next level.
 
 ### Level 11
-
+* `cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'`
+* Explanation: Decode the contents of the file by performing a ROT-13 operation on its content, uisng the tr command & get the password for the next level.
 
 ### Level 12
-
-
+* `cat ~/data.txt | xxd -r > data`
+* Explanation: The file is hexdump so to reverse the hexdump use the xxd command with r flag & save the contents into a new file. Using the file command check the type of the file.
+    * It should be a compressed file. To decompress use different command like gzip, bzip, tar, etc commands until the file completely decompressed & you are left with an ASCII text file. Read the file content & get the password for the next user.
+    * Note: If the decompression fails, try adding an extension to the compressed file. For e.g. if the file is "gzip" then add the ".gz" extension & then try to decompress.
+  
 ### Level 13
-
+* `ssh bandit14@localhost -i sshkey.private -p 2220`
+* Explanation: Use the Private Key provided to login to the next level by SSH.
 
 ### Level 14
-
+* `cat /etc/bandit_pass/bandit14`
+* `nc 127.0.0.1 30000`
+* Explanation: Get the password for the current level by reading the "/etc/bandit_pass/bandit14" file. Connect to the localhost & given port 30000 via netcat & submit the password of the current level. If the password is correct, the password for the next level will be given.
 
 ### Level 15
-
+* `openssl s_client -connect localhost:30001`
+* Explanation: Use the OpenSSL command to connect to localhost on the given port & submit the password for the current level. If the password is correct, the password for the next level will be given.
 
 ### Level 16
-
+* `nmap localhost -p31000-32000 -v -T4`
+* `openssl s_client -connect localhost:<PORT>`
+* Explanation: Perform an nmap scan on localhost on ports between 31000 - 32000. It is display all the open ports between the range.
+  * Use OpenSSL to connect to the port one by one, until one of them will accept the current users password & will give the SSH Private key for the next level.
 
 ### Level 17
-
+* `diff passwords.old passwords.new`
+* Explanation: Use the diff command to find the difference between the two files & get the password for the next level.
 
 ### Level 18
-
+* ``
+* Explanation: 
 
 ### Level 19
-
+* ``
+* Explanation: 
 
 ### Level 20
-
+* ``
+* Explanation: 
 
 ### Level 21
-
+* ``
+* Explanation: 
 
 ### Level 22
 
