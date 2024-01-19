@@ -47,9 +47,106 @@ You're all set to start your journey! Begin with [Level 0](#), linked on the lef
 30. [Level 29](#level-29)
 31. [Level 30](#level-30)
 
+
 ## Solutions
 ### Level 0
 `cat readme`
 
 ### Level 1
+`cat ./-`
+
+### Level 2
+`cat ./spaces\ in\ this\ filename`
+`cat "spaces in this filename"`
+
+### Level 3
+` cat inhere/.hidden`
+
+### Level 4
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+`file ./inhere/`
+` cat ./inhere/-file07`
+
+### Level 5
+
+
+
+### Level 6
+
+
+### Level 7
+
+
+### Level 8
+
+
+### Level 9
+
+
+### Level 10
+
+
+### Level 11
+
+
+### Level 12
+
+
+### Level 13
+
+
+### Level 14
+
+
+### Level 15
+
+
+### Level 16
+
+
+### Level 17
+
+
+### Level 18
+
+
+### Level 19
+
+
+### Level 20
+
+
+### Level 21
+
+
+### Level 22
+
+
+### Level 23
+
+
+### Level 24
+
+
+### Level 25
+
+
+### Level 26
+
+
+### Level 27
+
+
+### Level 28
+
+
+### Level 28
+
+
+### Level 29
+
+
+### Level 30
+
+
 
