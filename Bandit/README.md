@@ -48,16 +48,19 @@ To begin your journey with Level 0, log in via SSH using the following command:
 34. [Level 33](#level-33)
 
 
-## Solutions
+## Solution
 ### Level 0
 * `cat readme`
+* Explanation: Use the cat command to display the contents of the readme file. The password for Level 1 will be in the output.
 
 ### Level 1
-`cat ./-`
+* `cat ./-`
+* Explanation: Here, ./- refers to the filename -. Use the cat command to read the contents of this file & find the password for Level 2.
 
 ### Level 2
 `cat ./spaces\ in\ this\ filename`
 `cat "spaces in this filename"`
+Explanation: This level involves a filename with spaces. Use either of the provided commands to display the contents of the file and obtain the password for Level 3.
 
 ### Level 3
 ` cat inhere/.hidden`
