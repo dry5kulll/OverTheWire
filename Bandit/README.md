@@ -8,9 +8,8 @@ If you want to explore the original website, you can find it [here](https://over
 The game is organized into levels, starting from Level 0. Your goal is to "beat" or "finish" each level, which unlocks information on how to proceed to the next one. The website's pages for each level contain instructions on transitioning from the previous level. You can find links to all levels & their solutions below.
 
 ## Ready to Begin?
-To begin your journey with [Level 0](#), log in via SSH using the following command:
-`ssh bandit0@bandit.labs.overthewire.org -p 2220`
-Password for Level 0 is "bandit0". As you progress, the password for the next level will be revealed on each level's page.
+To begin your journey with Level 0, log in via SSH using the following command:
+`ssh bandit0@bandit.labs.overthewire.org -p 2220`. Password for Level 0 is "bandit0". As you progress, the password for the next level will be revealed on each level's page.
 
 ## Table of Contents
 1. [Level 0](#level-0)
@@ -44,6 +43,9 @@ Password for Level 0 is "bandit0". As you progress, the password for the next le
 29. [Level 28](#level-28)
 30. [Level 29](#level-29)
 31. [Level 30](#level-30)
+32. [Level 31](#level-31)
+33. [Level 32](#level-32)
+34. [Level 33](#level-33)
 
 
 ## Solutions
