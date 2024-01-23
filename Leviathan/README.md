@@ -19,33 +19,37 @@ Data for the levels can be found in the homedirectories. You can look at /etc/le
 
 ### Leviathan 0:
 
-- Description: There is a bookmarks.html file in the home directory which has lots of content. Use grep command to extract the password string from the file.
-- Command(s): `cat bookmarks.html | grep password`
+- Description:
+    - There is a `bookmarks.html` file in the hidden backup directory which has lots of content. Use grep command to extract the password string from the file.
+- Commands:
+    - `cat .backup/bookmarks.html | grep password`
 
 ### Leviathan 1:
 
 - Description:
-- Command(s):
+    - There is a executable file `check` which has setuid bit set. On executing the file, it accepts passwords as input & return some output.
+    - As we don't know the correct password, lets use (ltrace)[https://man7.org/linux/man-pages/man1/ltrace.1.html] to see what the executable is doing.
+- Commands: 
 
 ### Leviathan 2:
 
 - Description:
-- Command(s):
+- Commands:
 
 ### Leviathan 3:
 
 - Description:
-- Command(s):
+- Commands:
 
 ### Leviathan 4:
 
 - Description:
-- Command(s):
+- Commands:
 
 ### Leviathan 5:
 
 - Description:
-- Command(s):
+- Commands:
 
 ### Leviathan 6:
 
