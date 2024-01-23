@@ -31,8 +31,8 @@ Data for the levels can be found in the homedirectories. You can look at `/etc/l
     - During the trace, we identify a string comparison operation (strcmp("pas", "sex")) where the entered value is compared against the string sex. With this newfound knowledge, we can use "sex" as the password. Upon successful entry, a new terminal is spawned, and checking the user information with the id command confirms that we are now leviathan2.
     - To proceed to the next level, we retrieve the password from the /etc/leviathan_pass/leviathan2 file.
 - Commands:
-      - ltrace ./check 
-      - cat cat /etc/leviathan_pass/leviathan2
+    - ltrace ./check
+    - cat /etc/leviathan_pass/leviathan2
 
 ### Leviathan 2:
 
