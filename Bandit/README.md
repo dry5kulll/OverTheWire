@@ -50,104 +50,86 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 ## Solution 💡
 ### Level 0
-- **Description**:
+- **Description:**
      - There is is `readme` in the home directory which contains the password for the next level, use the cat command to display its contents.
-- **Commands**:
+- **Commands:**
      - `cat readme`
 
 ### Level 1
-- **Description**:
+- **Description:**
      - There is a file in the home directory that has a name `-`. Use the cat command as shown below to read the contents of this file & find the password for the next level.
-- **Commands**:
+- **Commands:**
      - `cat ./-`
 
 ### Level 2
-- **Description**:
+- **Description:**
      - This level involves a filename with spaces. Use either of the provided commands to display the contents of the file & obtain the password for Level 3.
-- **Commands**:
+- **Commands:**
      - `cat ./spaces\ in\ this\ filename` or `cat "spaces in this filename"`
 
 ### Level 3
-- **Description**:
+- **Description:**
      - There is directory named `inhere` which contains a hiden file as its name starts with a dot. To list all the files including hidden files in a dirctory use the -a option in the ls command. Read the content of the file by cat command & get the password for the next level.
-- **Commands**:
+- **Commands:**
      - `ls -la inhere/`
      - `cat inhere/.hidden`
 
 ### Level 4
-- **Description**:
+- **Description:**
      - There are multiple files in the `inhere` directory. Use the file command on each of those files & get their file types. Read the content of the file whose file type is `ASCII Test` & get the password of the next level.
-- **Commands**:
+- **Commands:**
      - `file ./inhere/`
      - `cat ./inhere/-file07`
 
 ### Level 5
-- **Description**:
-     - This
+- **Description:**
+     - From the given description, the file size is 1033 bytes. Using find command search for all the files whose size is 1033 bytes in the directory & get the password for the next level.
 - **Commands**:
-     - `cat
-
-* `find . -type f -size 1033c`
-* Explanation: As per the given description, the file size is 1033 bytes, thus use the find command to find all the files whose size is 1033 bytes & get the password for the next level.
+     - `find . -type f -size 1033c`
 
 ### Level 6
-- **Description**:
-     - This
-- **Commands**:
-     - `cat
-
-* `find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null `
-* Explanation: As per the given description, use the find command with different flag to find the file & get the password for the next level.
+- **Description:**
+     - From the given description, the owner of the file is `bandit7` & it belongs to `bandit6` group. Use the below find command to search of the file & get the password for the next level.
+- **Commands:**
+     - `find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null`
 
 ### Level 7
-- **Description**:
-     - This
-- **Commands**:
-     - `cat
-
-* `cat data.txt | grep millionth`
-* Explanation: Use the grep command to extract the line that contains the word "millionth" & get the password for the next level.
+- **Description:**
+     - Use the grep command to extract the line that contains the word `millionth` & get the password for the next level.
+- **Commands:**
+     - `cat data.txt | grep millionth`
 
 ### Level 8
-- **Description**:
-     - This
-- **Commands**:
-     - `cat
-
-* `cat data.txt | sort | uniq -c`
-* Explanation: Sort the file & list the number of occurances of each line using the uniq command. The line which has 1 written before it occurs only once in the file & that is the password for the next level.
+- **Description:**
+     - Sort the file using the sort command & list the number of occurances of each line using the uniq command. The line which has 1 written before it occurs only once in the file & that is the password for the next level.
+- **Commands:**
+     - `cat data.txt | sort | uniq -c`
 
 ### Level 9
-- **Description**:
-     - This
-- **Commands**:
-     - `cat
-
-* `cat data.txt | strings`
-* Explanation: Using strings extract the readable characters from the file & get the password for the next level.
+- **Description:**
+     -  Using strings extract the readable characters from the file & get the password for the next level.
+- **Commands:**
+     - `cat data.txt | strings`
 
 ### Level 10
-- **Description**:
-     - This
-- **Commands**:
-     - `cat
-
-* `cat data.txt  | base64 -d`
-* Explanation: Decode the contents of the file using Base64 & get the password for the next level.
+- **Description:**
+     - Decode the contents of the file using Base64 & get the password for the next level.
+- **Commands:**
+     - `cat data.txt  | base64 -d`
 
 ### Level 11
-- **Description**:
+- **Description:**
      - This
-- **Commands**:
+- **Commands:**
      - `cat
 
 * `cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'`
 * Explanation: Decode the contents of the file by performing a ROT-13 operation on its content, uisng the tr command & get the password for the next level.
 
 ### Level 12
-- **Description**:
+- **Description:**
      - This
-- **Commands**:
+- **Commands:**
      - `cat
 
 * `cat ~/data.txt | xxd -r > data`
