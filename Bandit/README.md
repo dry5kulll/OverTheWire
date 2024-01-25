@@ -52,39 +52,39 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 0
 - **Description**:
      - There is is `readme` in the home directory which contains the password for the next level, use the cat command to display its contents.
-- Commands:
+- **Commands**:
      - `cat readme`
 
 ### Level 1
 - **Description**:
      - There is a file in the home directory that has a name `-`. Use the cat command as shown below to read the contents of this file & find the password for the next level.
-- Commands:
+- **Commands**:
      - `cat ./-`
 
 ### Level 2
 - **Description**:
      - This level involves a filename with spaces. Use either of the provided commands to display the contents of the file & obtain the password for Level 3.
-- Commands:
+- **Commands**:
      - `cat ./spaces\ in\ this\ filename` or `cat "spaces in this filename"`
 
 ### Level 3
 - **Description**:
      - There is directory named `inhere` which contains a hiden file as its name starts with a dot. To list all the files including hidden files in a dirctory use the -a option in the ls command. Read the content of the file by cat command & get the password for the next level.
-- Commands:
+- **Commands**:
      - `ls -la inhere/`
      - `cat inhere/.hidden`
 
 ### Level 4
 - **Description**:
      - There are multiple files in the `inhere` directory. Use the file command on each of those files & get their file types. Read the content of the file whose file type is `ASCII Test` & get the password of the next level.
-- Commands:
+- **Commands**:
      - `file ./inhere/`
      - `cat ./inhere/-file07`
 
 ### Level 5
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `find . -type f -size 1033c`
@@ -93,7 +93,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 6
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null `
@@ -102,7 +102,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 7
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `cat data.txt | grep millionth`
@@ -111,7 +111,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 8
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `cat data.txt | sort | uniq -c`
@@ -120,7 +120,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 9
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `cat data.txt | strings`
@@ -129,7 +129,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 10
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `cat data.txt  | base64 -d`
@@ -138,7 +138,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 11
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'`
@@ -147,7 +147,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 12
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `cat ~/data.txt | xxd -r > data`
@@ -158,7 +158,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 13
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `ssh bandit14@localhost -i sshkey.private -p 2220`
@@ -167,7 +167,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 14
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `cat /etc/bandit_pass/bandit14`
@@ -177,7 +177,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 15
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `openssl s_client -connect localhost:30001`
@@ -186,7 +186,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 16
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `nmap localhost -p31000-32000 -v -T4`
@@ -197,7 +197,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 17
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 * `diff passwords.old passwords.new`
@@ -206,14 +206,14 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 18
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
 ### Level 19
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
@@ -221,7 +221,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 20
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
@@ -229,7 +229,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 21
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
@@ -237,7 +237,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 22
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
@@ -245,7 +245,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 23
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
@@ -253,7 +253,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 24
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
@@ -261,7 +261,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 25
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
@@ -269,7 +269,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 26
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
@@ -277,7 +277,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 27
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
@@ -285,7 +285,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 28
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
@@ -293,37 +293,37 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 29
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
 ### Level 29
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 
 ### Level 30
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 ### Level 31
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 ### Level 32
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
 
 ### Level 33
 - **Description**:
      - This
-- Commands:
+- **Commands**:
      - `cat
