@@ -50,134 +50,280 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 ## Solution 💡
 ### Level 0
-
 - Description:
-     - Use the cat command to display the contents of the readme file & grab the password for the net level.
+     - There is is `readme` in the home directory which contains the password for the next level, use the cat command to display its contents.
 - Commands:
      - `cat readme`
 
 ### Level 1
 - Description:
-     -  Here, ./- refers to the filename -. Use the cat command to read the contents of this file & find the password for Level 2.
+     - There is a file in the home directory that has a name `-`. Use the cat command as shown below to read the contents of this file & find the password for the next level.
 - Commands:
      - `cat ./-`
 
 ### Level 2
-* `cat ./spaces\ in\ this\ filename` or `cat "spaces in this filename"`
-* Explanation: This level involves a filename with spaces. Use either of the provided commands to display the contents of the file & obtain the password for Level 3.
+- Description:
+     - This level involves a filename with spaces. Use either of the provided commands to display the contents of the file & obtain the password for Level 3.
+- Commands:
+     - `cat ./spaces\ in\ this\ filename` or `cat "spaces in this filename"`
 
 ### Level 3
-* `ls -la inhere/`
-* `cat inhere/.hidden`
-* Explanation: The filename starts with a dot therefore it is hidden. To list the file use the -a option in the ls command. Read the content of the file by cat command & get the password for the next level.
+- Description:
+     - There is directory named `inhere` which contains a hiden file as its name starts with a dot. To list all the files including hidden files in a dirctory use the -a option in the ls command. Read the content of the file by cat command & get the password for the next level.
+- Commands:
+     - `ls -la inhere/`
+     - `cat inhere/.hidden`
 
 ### Level 4
-lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
-* `file ./inhere/`
-* `cat ./inhere/-file07`
-* Explanation: There are multiple files, therefore use the file command to check the file type of each files in the directory. Read the content of the file whose file type is ASCII Text & get the password for the next level.
+- Description:
+     - There are multiple files in the `inhere` directory. Use the file command on each of those files & get their file types. Read the content of the file whose file type is `ASCII Test` & get the password of the next level.
+- Commands:
+     - `file ./inhere/`
+     - `cat ./inhere/-file07`
 
 ### Level 5
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `find . -type f -size 1033c`
 * Explanation: As per the given description, the file size is 1033 bytes, thus use the find command to find all the files whose size is 1033 bytes & get the password for the next level.
 
 ### Level 6
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null `
 * Explanation: As per the given description, use the find command with different flag to find the file & get the password for the next level.
 
 ### Level 7
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `cat data.txt | grep millionth`
 * Explanation: Use the grep command to extract the line that contains the word "millionth" & get the password for the next level.
 
 ### Level 8
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `cat data.txt | sort | uniq -c`
 * Explanation: Sort the file & list the number of occurances of each line using the uniq command. The line which has 1 written before it occurs only once in the file & that is the password for the next level.
 
 ### Level 9
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `cat data.txt | strings`
 * Explanation: Using strings extract the readable characters from the file & get the password for the next level.
 
 ### Level 10
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `cat data.txt  | base64 -d`
 * Explanation: Decode the contents of the file using Base64 & get the password for the next level.
 
 ### Level 11
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'`
 * Explanation: Decode the contents of the file by performing a ROT-13 operation on its content, uisng the tr command & get the password for the next level.
 
 ### Level 12
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `cat ~/data.txt | xxd -r > data`
 * Explanation: The file is hexdump so to reverse the hexdump use the xxd command with r flag & save the contents into a new file. Using the file command check the type of the file.
     * It should be a compressed file. To decompress use different command like gzip, bzip, tar, etc commands until the file completely decompressed & you are left with an ASCII text file. Read the file content & get the password for the next user.
     * Note: If the decompression fails, try adding an extension to the compressed file. For e.g. if the file is "gzip" then add the ".gz" extension & then try to decompress.
   
 ### Level 13
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `ssh bandit14@localhost -i sshkey.private -p 2220`
 * Explanation: Use the Private Key provided to login to the next level by SSH.
 
 ### Level 14
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `cat /etc/bandit_pass/bandit14`
 * `nc 127.0.0.1 30000`
 * Explanation: Get the password for the current level by reading the "/etc/bandit_pass/bandit14" file. Connect to the localhost & given port 30000 via netcat & submit the password of the current level. If the password is correct, the password for the next level will be given.
 
 ### Level 15
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `openssl s_client -connect localhost:30001`
 * Explanation: Use the OpenSSL command to connect to localhost on the given port & submit the password for the current level. If the password is correct, the password for the next level will be given.
 
 ### Level 16
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `nmap localhost -p31000-32000 -v -T4`
 * `openssl s_client -connect localhost:<PORT>`
 * Explanation: Perform an nmap scan on localhost on ports between 31000 - 32000. It is display all the open ports between the range.
   * Use OpenSSL to connect to the port one by one, until one of them will accept the current users password & will give the SSH Private key for the next level.
 
 ### Level 17
+- Description:
+     - This
+- Commands:
+     - `cat
+
 * `diff passwords.old passwords.new`
 * Explanation: Use the diff command to find the difference between the two files & get the password for the next level.
 
 ### Level 18
-* ``
-* Explanation: 
+- Description:
+     - This
+- Commands:
+     - `cat
+
 
 ### Level 19
-* ``
-* Explanation: 
+- Description:
+     - This
+- Commands:
+     - `cat
+
+
 
 ### Level 20
-* ``
-* Explanation: 
+- Description:
+     - This
+- Commands:
+     - `cat
+
+
 
 ### Level 21
-* ``
-* Explanation: 
+- Description:
+     - This
+- Commands:
+     - `cat
+
+
 
 ### Level 22
+- Description:
+     - This
+- Commands:
+     - `cat
+
 
 
 ### Level 23
+- Description:
+     - This
+- Commands:
+     - `cat
+
 
 
 ### Level 24
+- Description:
+     - This
+- Commands:
+     - `cat
+
 
 
 ### Level 25
+- Description:
+     - This
+- Commands:
+     - `cat
+
 
 
 ### Level 26
+- Description:
+     - This
+- Commands:
+     - `cat
+
 
 
 ### Level 27
+- Description:
+     - This
+- Commands:
+     - `cat
+
 
 
 ### Level 28
+- Description:
+     - This
+- Commands:
+     - `cat
 
-
-### Level 28
 
 
 ### Level 29
+- Description:
+     - This
+- Commands:
+     - `cat
+
+
+### Level 29
+- Description:
+     - This
+- Commands:
+     - `cat
 
 
 ### Level 30
+- Description:
+     - This
+- Commands:
+     - `cat
 
+### Level 31
+- Description:
+     - This
+- Commands:
+     - `cat
 
+### Level 32
+- Description:
+     - This
+- Commands:
+     - `cat
 
+### Level 33
+- Description:
+     - This
+- Commands:
+     - `cat
