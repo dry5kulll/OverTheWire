@@ -56,7 +56,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
      - `cat readme`
 
 ### Level 1
-- Description:
+- **Description**:
      - There is a file in the home directory that has a name `-`. Use the cat command as shown below to read the contents of this file & find the password for the next level.
 - Commands:
      - `cat ./-`
