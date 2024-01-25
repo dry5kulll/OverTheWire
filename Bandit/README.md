@@ -51,7 +51,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ## Solution 💡
 ### Level 0
 - **Description:**
-     - There is is `readme` in the home directory which contains the password for the next level, use the cat command to display its contents.
+     - There is a `readme` in the home directory which contains the password for the next level, use the cat command to display its contents.
 - **Commands:**
      - `cat readme`
 
