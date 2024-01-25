@@ -50,7 +50,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 ## Solution 💡
 ### Level 0
-- Description:
+- **Description**:
      - There is is `readme` in the home directory which contains the password for the next level, use the cat command to display its contents.
 - Commands:
      - `cat readme`
@@ -62,27 +62,27 @@ To begin your journey with Level 0, log in via SSH using the following command:
      - `cat ./-`
 
 ### Level 2
-- Description:
+- **Description**:
      - This level involves a filename with spaces. Use either of the provided commands to display the contents of the file & obtain the password for Level 3.
 - Commands:
      - `cat ./spaces\ in\ this\ filename` or `cat "spaces in this filename"`
 
 ### Level 3
-- Description:
+- **Description**:
      - There is directory named `inhere` which contains a hiden file as its name starts with a dot. To list all the files including hidden files in a dirctory use the -a option in the ls command. Read the content of the file by cat command & get the password for the next level.
 - Commands:
      - `ls -la inhere/`
      - `cat inhere/.hidden`
 
 ### Level 4
-- Description:
+- **Description**:
      - There are multiple files in the `inhere` directory. Use the file command on each of those files & get their file types. Read the content of the file whose file type is `ASCII Test` & get the password of the next level.
 - Commands:
      - `file ./inhere/`
      - `cat ./inhere/-file07`
 
 ### Level 5
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -91,7 +91,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 * Explanation: As per the given description, the file size is 1033 bytes, thus use the find command to find all the files whose size is 1033 bytes & get the password for the next level.
 
 ### Level 6
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -100,7 +100,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 * Explanation: As per the given description, use the find command with different flag to find the file & get the password for the next level.
 
 ### Level 7
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -109,7 +109,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 * Explanation: Use the grep command to extract the line that contains the word "millionth" & get the password for the next level.
 
 ### Level 8
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -118,7 +118,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 * Explanation: Sort the file & list the number of occurances of each line using the uniq command. The line which has 1 written before it occurs only once in the file & that is the password for the next level.
 
 ### Level 9
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -127,7 +127,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 * Explanation: Using strings extract the readable characters from the file & get the password for the next level.
 
 ### Level 10
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -136,7 +136,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 * Explanation: Decode the contents of the file using Base64 & get the password for the next level.
 
 ### Level 11
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -145,7 +145,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 * Explanation: Decode the contents of the file by performing a ROT-13 operation on its content, uisng the tr command & get the password for the next level.
 
 ### Level 12
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -156,7 +156,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
     * Note: If the decompression fails, try adding an extension to the compressed file. For e.g. if the file is "gzip" then add the ".gz" extension & then try to decompress.
   
 ### Level 13
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -165,7 +165,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 * Explanation: Use the Private Key provided to login to the next level by SSH.
 
 ### Level 14
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -175,7 +175,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 * Explanation: Get the password for the current level by reading the "/etc/bandit_pass/bandit14" file. Connect to the localhost & given port 30000 via netcat & submit the password of the current level. If the password is correct, the password for the next level will be given.
 
 ### Level 15
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -184,7 +184,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 * Explanation: Use the OpenSSL command to connect to localhost on the given port & submit the password for the current level. If the password is correct, the password for the next level will be given.
 
 ### Level 16
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -195,7 +195,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
   * Use OpenSSL to connect to the port one by one, until one of them will accept the current users password & will give the SSH Private key for the next level.
 
 ### Level 17
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -204,14 +204,14 @@ To begin your journey with Level 0, log in via SSH using the following command:
 * Explanation: Use the diff command to find the difference between the two files & get the password for the next level.
 
 ### Level 18
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
 
 
 ### Level 19
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -219,7 +219,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 
 ### Level 20
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -227,7 +227,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 
 ### Level 21
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -235,7 +235,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 
 ### Level 22
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -243,7 +243,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 
 ### Level 23
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -251,7 +251,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 
 ### Level 24
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -259,7 +259,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 
 ### Level 25
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -267,7 +267,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 
 ### Level 26
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -275,7 +275,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 
 ### Level 27
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -283,7 +283,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 
 ### Level 28
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
@@ -291,39 +291,39 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 
 ### Level 29
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
 
 
 ### Level 29
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
 
 
 ### Level 30
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
 
 ### Level 31
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
 
 ### Level 32
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
 
 ### Level 33
-- Description:
+- **Description**:
      - This
 - Commands:
      - `cat
