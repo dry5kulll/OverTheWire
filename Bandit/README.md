@@ -1,6 +1,6 @@
 # OverTheWire Bandit Challenge 🎮
 
-## Introduction
+## Introduction 🚀
 Welcome to the Bandit wargame, an engaging challenge designed for absolute beginners. This game aims to teach fundamental skills essential for playing other wargames.
 If you want to explore the original website, you can find it [here](https://overthewire.org/wargames/bandit/).
 
@@ -9,7 +9,7 @@ The game is organized into levels, starting from Level 0. Your goal is to "beat"
 
 ## Ready to Begin? 🚀
 To begin your journey with Level 0, log in via SSH using the following command:
-`ssh bandit0@bandit.labs.overthewire.org -p 2220`. Password for Level 0 is "bandit0". As you progress, the password for the next level will be revealed on each level's page.
+`ssh bandit0@bandit.labs.overthewire.org -p 2220`. Password for Level 0 is `bandit0`. As you progress, the password for the next level will be revealed on each level's page.
 
 ## Table of Contents 📚
 1. [Level 0](#level-0)
