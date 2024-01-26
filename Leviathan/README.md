@@ -26,11 +26,11 @@ Data for the levels can be found in the homedirectories. You can look at `/etc/l
 
 ### Leviathan 1:
 
-**- Description:**
+- **Description:**
     - In this challenge, there is an executable file named `check` with the setuid bit set. When executed, it prompts the user for a password and returns some output. Since the correct password is unknown, I utilized the [ltrace](https://man7.org/linux/man-pages/man1/ltrace.1.html) tool to observe the actions performed by the executable.
     - During the trace, I saw a string comparison operation `(strcmp("pas", "sex"))` where the entered value is compared against the string `sex`. I used this information & entered `sex` as the password. Upon successful entry, a new terminal is spawned, and checking the user information with the id command confirms that I am now leviathan2.
     - To proceed to the next level, I retrieved the password from the `/etc/leviathan_pass/leviathan2` file.
-- Commands:
+- **Commands**:
     - `ltrace ./check`
     - `cat /etc/leviathan_pass/leviathan2`
 
