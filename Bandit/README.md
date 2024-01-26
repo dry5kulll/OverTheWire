@@ -119,24 +119,23 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 ### Level 11
 - **Description:**
-     - This
+     - The contents of the file are encoded using ROT-13 algorithm. Use [this](https://rot13.com/) website to decode the contents or use the `tr` command below.
 - **Commands:**
-     - `cat
-
-* `cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'`
-* Explanation: Decode the contents of the file by performing a ROT-13 operation on its content, uisng the tr command & get the password for the next level.
+     - `cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'`
 
 ### Level 12
 - **Description:**
-     - This
+     - The password for the next level is stored in `data.txt` file which is in hex format. Use the `xxd` command to reverse the reverse the hex data & copy the output into a new file.
+     - Use the file command to check the file type. It is a compressed file. Use the gzip, bzip or tar command depending upon the compression type to decompress the file, until you get a file whose type is `ASCII text`. Read the file to get the password for the next level.
+     - **Note:** If the decompressions fails, try adding an extension to the compressed file. For e.g. if the file is "gzip" then add the ".gz" extension & then try to decompress.
 - **Commands:**
-     - `cat
+     - `cat ~/data.txt | xxd -r > <output_file>` (Reverse the hexdump)
+     - `file <output_file>` (Check file type)
+     - `bzip2 -d <output_file>`
+     - `gzip -d <output_file>.gz`
+     - `tar -xvf <output_file>`
+     - `cat <output_file>`
 
-* `cat ~/data.txt | xxd -r > data`
-* Explanation: The file is hexdump so to reverse the hexdump use the xxd command with r flag & save the contents into a new file. Using the file command check the type of the file.
-    * It should be a compressed file. To decompress use different command like gzip, bzip, tar, etc commands until the file completely decompressed & you are left with an ASCII text file. Read the file content & get the password for the next user.
-    * Note: If the decompression fails, try adding an extension to the compressed file. For e.g. if the file is "gzip" then add the ".gz" extension & then try to decompress.
-  
 ### Level 13
 - **Description**:
      - This
