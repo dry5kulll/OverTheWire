@@ -18,10 +18,9 @@ Data for the levels can be found in the homedirectories. You can look at `/etc/l
 ## Solutions:
 
 ### Leviathan 0:
-
-- Description:
+- **Description:**
     - There is a `bookmarks.html` file in the hidden backup directory which has lots of content. I used grep to extract the password string from the file.
-- Commands:
+- **Commands:**
     - `cat .backup/bookmarks.html | grep password`
 
 ### Leviathan 1:
@@ -36,8 +35,9 @@ Data for the levels can be found in the homedirectories. You can look at `/etc/l
 
 ### Leviathan 2:
 
-- Description:
-    - In this challenge, there is an executable file `printfile` that prints the content of any file that is specified. I tried to get the password for the next level
+- **Description:**
+    - In this challenge, there is an executable file `printfile` that prints the content of any file that is specified. I tried to get the password for the next level for it but it didn't allow me to read that file.
+    - Next, I used ltrace command to see what library calls are made & found that it was using cat command to read the file.
 - Commands:
     - 
 
