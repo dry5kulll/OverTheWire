@@ -125,35 +125,32 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 ### Level 12
 - **Description:**
-     - The password for the next level is stored in `data.txt` file which is in hex format. Use the `xxd` command to reverse the reverse the hex data & copy the output into a new file.
-     - Use the file command to check the file type. It is a compressed file. Use the gzip, bzip or tar command depending upon the compression type to decompress the file, until you get a file whose type is `ASCII text`. Read the file to get the password for the next level.
-     - **Note:** If the decompressions fails, try adding an extension to the compressed file. For e.g. if the file is "gzip" then add the ".gz" extension & then try to decompress.
+     - The password for the next level is stored in `data.txt` file which is encoded in hex format.
+     - Use the `xxd` command to reverse the hex data and save the output to a new file.
+     - Utilize the file command to determine the file type. If it is a compressed file, proceed with the appropriate decompression command `(gzip, bzip2, or tar)` until an ASCII text file is obtained.
+     - Read the contents of the file to obtain the password for the next level.
+     - **Note:** If decompression fails, attempt adding an extension to the compressed file. For instance, if the file is compressed with `gzip`, add the `.gz` extension and retry the decompression.
 - **Commands:**
      - `cat ~/data.txt | xxd -r > <output_file>` (Reverse the hexdump)
      - `file <output_file>` (Check file type)
-     - `bzip2 -d <output_file>`
-     - `gzip -d <output_file>.gz`
-     - `tar -xvf <output_file>`
-     - `cat <output_file>`
+     - `bzip2 -d <output_file>` (bzip2 decompression)
+     - `gzip -d <output_file>.gz` (gzip decompression)
+     - `tar -xvf <output_file>` (tar decompression)
+     - `cat <output_file>` (Read the password)
 
 ### Level 13
 - **Description**:
-     - This
+     - Use the SSH Private Key to login to the login next level.
 - **Commands**:
-     - `cat
-
-* `ssh bandit14@localhost -i sshkey.private -p 2220`
-* Explanation: Use the Private Key provided to login to the next level by SSH.
+     - `ssh bandit14@localhost -i sshkey.private -p 2220`
 
 ### Level 14
 - **Description**:
-     - This
+     - Connect to the localhost on port `30000` using `netcat` and submit the password for the current level.
+     - Use the `cat` command to read the password for the current level from the etc directory.
 - **Commands**:
-     - `cat
-
-* `cat /etc/bandit_pass/bandit14`
-* `nc 127.0.0.1 30000`
-* Explanation: Get the password for the current level by reading the "/etc/bandit_pass/bandit14" file. Connect to the localhost & given port 30000 via netcat & submit the password of the current level. If the password is correct, the password for the next level will be given.
+     - `cat /etc/bandit_pass/bandit14`
+     - `nc 127.0.0.1 30000`
 
 ### Level 15
 - **Description**:
