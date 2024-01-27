@@ -191,7 +191,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 ### Level 20
 - **Description**:
-     - There is `suconnect` file which connects to an open port & gives the password for the next level, if it receives the correct password for the current level.
+     - There is an `suconnect` executable (setuid bit set) file which connects to an open port & gives the password for the next level, if it receives the correct password for the current level.
      - Use `echo` command to display the password for the current level & pipe it to the `ncat` listener, that will open up an arbitrary port on the localhost.
      - You can either create a new SSH connection in another terminal or use the same terminal by putting the `ncat` listener in bckground as shown below.
 - **Commands**:
