@@ -5,7 +5,7 @@ Welcome to the Bandit wargame, an engaging challenge designed for absolute begin
 If you want to explore the original website, you can find it [here](https://overthewire.org/wargames/bandit/).
 
 ## Getting Started 🛠️
-The game is organized into levels, starting from Level 0. Your goal is to "beat" or "finish" each level, which unlocks information on how to proceed to the next one. The website's pages for each level contain instructions on transitioning from the previous level. You can find links to all levels & their solutions below.
+The game is organized into levels, starting from Level 0. Your goal is to "beat" or "finish" each level, which unlocks information on how to proceed to the next one. The website's pages for each level contain instructions on transitioning from the previous level. You can find links to all levels and their solutions below.
 
 ## Ready to Begin? 🚀
 To begin your journey with Level 0, log in via SSH using the following command:
@@ -57,63 +57,63 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 ### Level 1
 - **Description:**
-     - There is a file in the home directory that has a name `-`. Use the cat command as shown below to read the contents of this file & find the password for the next level.
+     - There is a file in the home directory that has a name `-`. Use the cat command as shown below to read the contents of this file and find the password for the next level.
 - **Commands:**
      - `cat ./-`
 
 ### Level 2
 - **Description:**
-     - This level involves a filename with spaces. Use either of the provided commands to display the contents of the file & obtain the password for Level 3.
+     - This level involves a filename with spaces. Use either of the provided commands to display the contents of the file and obtain the password for Level 3.
 - **Commands:**
      - `cat ./spaces\ in\ this\ filename` or `cat "spaces in this filename"`
 
 ### Level 3
 - **Description:**
-     - There is directory named `inhere` which contains a hiden file as its name starts with a dot. To list all the files including hidden files in a dirctory use the -a option in the ls command. Read the content of the file by cat command & get the password for the next level.
+     - There is directory named `inhere` which contains a hiden file as its name starts with a dot. To list all the files including hidden files in a dirctory use the -a option in the ls command. Read the content of the file by cat command and get the password for the next level.
 - **Commands:**
      - `ls -la inhere/`
      - `cat inhere/.hidden`
 
 ### Level 4
 - **Description:**
-     - There are multiple files in the `inhere` directory. Use the file command on each of those files & get their file types. Read the content of the file whose file type is `ASCII Test` & get the password of the next level.
+     - There are multiple files in the `inhere` directory. Use the file command on each of those files and get their file types. Read the content of the file whose file type is `ASCII Test` and get the password of the next level.
 - **Commands:**
      - `file ./inhere/`
      - `cat ./inhere/-file07`
 
 ### Level 5
 - **Description:**
-     - From the given description, the file size is 1033 bytes. Using find command search for all the files whose size is 1033 bytes in the directory & get the password for the next level.
+     - From the given description, the file size is 1033 bytes. Using find command search for all the files whose size is 1033 bytes in the directory and get the password for the next level.
 - **Commands**:
      - `find . -type f -size 1033c`
 
 ### Level 6
 - **Description:**
-     - From the given description, the owner of the file is `bandit7` & it belongs to `bandit6` group. Use the below find command to search of the file & get the password for the next level.
+     - From the given description, the owner of the file is `bandit7` and it belongs to `bandit6` group. Use the below find command to search of the file and get the password for the next level.
 - **Commands:**
      - `find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null`
 
 ### Level 7
 - **Description:**
-     - Use the grep command to extract the line that contains the word `millionth` & get the password for the next level.
+     - Use the grep command to extract the line that contains the word `millionth` and get the password for the next level.
 - **Commands:**
      - `cat data.txt | grep millionth`
 
 ### Level 8
 - **Description:**
-     - Sort the file using the sort command & list the number of occurances of each line using the uniq command. The line which has 1 written before it occurs only once in the file & that is the password for the next level.
+     - Sort the file using the sort command and list the number of occurances of each line using the uniq command. The line which has 1 written before it occurs only once in the file and that is the password for the next level.
 - **Commands:**
      - `cat data.txt | sort | uniq -c`
 
 ### Level 9
 - **Description:**
-     -  Using strings extract the readable characters from the file & get the password for the next level.
+     -  Using strings extract the readable characters from the file and get the password for the next level.
 - **Commands:**
      - `cat data.txt | strings`
 
 ### Level 10
 - **Description:**
-     - Decode the contents of the file using Base64 & get the password for the next level.
+     - Decode the contents of the file using Base64 and get the password for the next level.
 - **Commands:**
      - `cat data.txt  | base64 -d`
 
@@ -154,55 +154,49 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 ### Level 15
 - **Description**:
-     - This
+     - Connect to the localhost on the port `30001` using `openssl` and submit the password for the current level.
 - **Commands**:
-     - `cat
-
-* `openssl s_client -connect localhost:30001`
-* Explanation: Use the OpenSSL command to connect to localhost on the given port & submit the password for the current level. If the password is correct, the password for the next level will be given.
+     - `openssl s_client -connect localhost:30001`
 
 ### Level 16
 - **Description**:
-     - This
+     - Run an `nmap` scan on localhost on ports ranging between `31000 - 32000`. This will give list of open ports within the range.
+     - Connect to those open ports one by one using `openssl` & submit the password for the current level, until you get the SSH Private Key for the next level.
 - **Commands**:
-     - `cat
-
-* `nmap localhost -p31000-32000 -v -T4`
-* `openssl s_client -connect localhost:<PORT>`
-* Explanation: Perform an nmap scan on localhost on ports between 31000 - 32000. It is display all the open ports between the range.
-  * Use OpenSSL to connect to the port one by one, until one of them will accept the current users password & will give the SSH Private key for the next level.
+     - `nmap localhost -p31000-32000 -v -T4`
+     - `openssl s_client -connect localhost:<open_port>`
 
 ### Level 17
 - **Description**:
-     - This
+     - In the home directory there are two files `passwords.old` & `passwords.new`.
+     - Use the `diff` command to find out the difference between those two files & get the password of the next level.
 - **Commands**:
-     - `cat
-
-* `diff passwords.old passwords.new`
-* Explanation: Use the diff command to find the difference between the two files & get the password for the next level.
+     - `diff passwords.old passwords.new`
 
 ### Level 18
 - **Description**:
-     - This
+     - The SSH shell dies after you login to this level because the `.bashrc` file is modified in that way.
+     - You can just send the commands directly with the SSH connection string & it will give the output of that command.
+     - Read the `readme` file in the home directory & get the output for the next level.
 - **Commands**:
-     - `cat
-
+     - `ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat readme"`
 
 ### Level 19
 - **Description**:
-     - This
+     - There is a `bandit20-do` executable file which has setuid bit set.
+     - The file is owned by `bandit20` user so it can run commands as that user.
+     - Use is to read the password for the next level.
 - **Commands**:
-     - `cat
-
-
+     - `./bandit20-do cat /etc/bandit_pass/bandit20`
 
 ### Level 20
 - **Description**:
-     - This
+     - There is `suconnect` file which connects to an open port & gives the password for the next level, if it receives the correct password for the current level.
+     - Use `echo` command to display the password for the current level & pipe it to the `ncat` listener, that will open up an arbitrary port on the localhost.
+     - You can either create a new SSH connection in another terminal or use the same terminal by putting the `ncat` listener in bckground as shown below.
 - **Commands**:
-     - `cat
-
-
+     - `echo -n "VxCazJaVykI6W36BkBU0mJTCM8rR95XT" | ncat -lvnp 1337 &`
+     - `./suconnect 1337`
 
 ### Level 21
 - **Description**:
