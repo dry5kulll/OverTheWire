@@ -211,18 +211,14 @@ To begin your journey with Level 0, log in via SSH using the following command:
        chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
        cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
        ```
-     - It is a bash script that modifies permissions on a file in the `/tmp` directory and then copies password of the `bandit22` user into that file.
+     - The script modifies the permissions on the file in the `/tmp` directory and then copies the password of the `bandit22` user into that file.
 - **Commands**:
      - `cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv`
 
 ### Level 22
 - **Description**:
-     - There is a cronjob running in the `/etc/cron.d/` directory. The file `cronjob_bandit22` has the below code in it.
-       ```bash
-       @reboot bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
-       * * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
-       ```
-     - The script `/usr/bin/cronjob_bandit22.sh` is executed by `bandit22` user every minute of every hour, every day of the month, every month, every day of the week.
+     - Same as the previous level, there is a cronjob running.
+     - The script `/usr/bin/cronjob_bandit23.sh` is executed by `bandit23` user every minute of every hour, every day of the month, every month, every day of the week.
        ```bash
        #!/bin/bash
        myname=$(whoami)
@@ -230,7 +226,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
        echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
        cat /etc/bandit_pass/$myname > /tmp/$mytarget
        ```
-     - It is a bash script that modifies permissions on a file in the `/tmp` directory and then copies password of the `bandit22` user into that file.
+     - The script `/usr/bin/cronjob_bandit23.sh` is responsible for extracting the username of the executing user, appending it to the string `I am user `, generating an MD5 hash of the resulting string, and then copying the password file of the bandit23 user into a file named with the MD5 hash.
 - **Commands**:
      - `echo I am user bandit23 | md5sum | cut -d ' ' -f 1`
      - `cat /tmp/8ca319486bfbbc3663ea0fbe81326349`
