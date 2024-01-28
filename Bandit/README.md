@@ -200,20 +200,20 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 ### Level 21
 - **Description**:
-     - There is a cronjob running which you can find in the `/etc/cron.d/` directory using the command `ls -al /etc/cron.d`. There is file `cronjob_bandit22` running
-       ```bash
-          @reboot bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
-          * * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
-       ```
+     - There is a cronjob running in the `/etc/cron.d/` directory. The file `cronjob_bandit22` has the below code in it.
+```bash
+     @reboot bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+     * * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+```
      - The script `/usr/bin/cronjob_bandit22.sh` is executed by `bandit22` user every minute of every hour, every day of the month, every month, every day of the week.
-       ```bash
-          #!/bin/bash
-          chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
-          cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
-       ```
-     - 
+  ```bash
+     #!/bin/bash
+     chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+     cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+  ```
+     - It is a bash script that modifies permissions on a file in the `/tmp` directory and then copies password of the `bandit22` user into that file.
 - **Commands**:
-     - `cat
+     - `cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv`
 
 
 
