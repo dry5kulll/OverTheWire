@@ -139,72 +139,72 @@ To begin your journey with Level 0, log in via SSH using the following command:
      - `cat <output_file>` (Read the password)
 
 ### Level 13
-- **Description**:
+- **Description:**
      - Use the SSH Private Key to login to the login next level.
-- **Commands**:
+- **Commands:**
      - `ssh bandit14@localhost -i sshkey.private -p 2220`
 
 ### Level 14
-- **Description**:
+- **Description:**
      - Connect to the localhost on port `30000` using `netcat` and submit the password for the current level.
      - Use the `cat` command to read the password for the current level from the etc directory.
-- **Commands**:
+- **Commands:**
      - `cat /etc/bandit_pass/bandit14`
      - `nc 127.0.0.1 30000`
 
 ### Level 15
-- **Description**:
+- **Description:**
      - Connect to the localhost on the port `30001` using `openssl` and submit the password for the current level.
-- **Commands**:
+- **Commands:**
      - `openssl s_client -connect localhost:30001`
 
 ### Level 16
-- **Description**:
+- **Description:**
      - Run an `nmap` scan on localhost on ports ranging between `31000 - 32000`. This will give list of open ports within the range.
      - Connect to those open ports one by one using `openssl` & submit the password for the current level, until you get the SSH Private Key for the next level.
-- **Commands**:
+- **Commands:**
      - `nmap localhost -p31000-32000 -v -T4`
      - `openssl s_client -connect localhost:<open_port>`
 
 ### Level 17
-- **Description**:
+- **Description:**
      - In the home directory there are two files `passwords.old` & `passwords.new`.
      - Use the `diff` command to find out the difference between those two files & get the password of the next level.
-- **Commands**:
+- **Commands:**
      - `diff passwords.old passwords.new`
 
 ### Level 18
-- **Description**:
+- **Description:**
      - The SSH shell dies after you login to this level because the `.bashrc` file is modified in that way.
      - You can just send the commands directly with the SSH connection string & it will give the output of that command.
      - Read the `readme` file in the home directory & get the output for the next level.
-- **Commands**:
+- **Commands:**
      - `ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat readme"`
 
 ### Level 19
-- **Description**:
+- **Description:**
      - There is a `bandit20-do` executable file which has setuid bit set.
      - The file is owned by `bandit20` user so it can run commands as that user.
      - Use is to read the password for the next level.
-- **Commands**:
+- **Commands:**
      - `./bandit20-do cat /etc/bandit_pass/bandit20`
 
 ### Level 20
-- **Description**:
+- **Description:**
      - There is an `suconnect` executable (setuid bit set) file which connects to an open port & gives the password for the next level, if it receives the correct password for the current level.
      - Use `echo` command to display the password for the current level & pipe it to the `ncat` listener, that will open up an arbitrary port on the localhost.
      - You can either create a new SSH connection in another terminal or use the same terminal by putting the `ncat` listener in bckground as shown below.
-- **Commands**:
+- **Commands:**
      - `echo -n "VxCazJaVykI6W36BkBU0mJTCM8rR95XT" | ncat -lvnp 1337 &`
      - `./suconnect 1337`
 
 ### Level 21
 - **Description**:
      - There is a cronjob running in the `/etc/cron.d/` directory. The file `cronjob_bandit22` has the below code in it.
-     ```bash
+       ```bash
           @reboot bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
           * * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
-     ```
+       ```
      - The script `/usr/bin/cronjob_bandit22.sh` is executed by `bandit22` user every minute of every hour, every day of the month, every month, every day of the week.
        ```bash
           #!/bin/bash
@@ -214,8 +214,6 @@ To begin your journey with Level 0, log in via SSH using the following command:
      - It is a bash script that modifies permissions on a file in the `/tmp` directory and then copies password of the `bandit22` user into that file.
 - **Commands**:
      - `cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv`
-
-
 
 ### Level 22
 - **Description**:
