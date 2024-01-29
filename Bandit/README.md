@@ -218,7 +218,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 ### Level 22
 - **Description**:
      - Same as the previous level, there is a cronjob running.
-     - The script `/usr/bin/cronjob_bandit23.sh` is executed by `bandit23` user every minute of every hour, every day of the month, every month, every day of the week.
+     - The script `/usr/bin/cronjob_bandit23.sh` executed by `bandit23` user has the below code in it.
        ```bash
        #!/bin/bash
        myname=$(whoami)
@@ -231,10 +231,31 @@ To begin your journey with Level 0, log in via SSH using the following command:
      - `echo I am user bandit23 | md5sum | cut -d ' ' -f 1`
      - `cat /tmp/8ca319486bfbbc3663ea0fbe81326349`
 
-
 ### Level 23
 - **Description**:
      - Same as the previous level, there is a cronjob running.
+     - The script `/usr/bin/cronjob_bandit24.sh` executed by `bandit24` user has the below code in it.
+       ```bash
+       #!/bin/bash
+       myname=$(whoami)
+       cd /var/spool/$myname/foo
+       echo "Executing and deleting all scripts in /var/spool/$myname/foo:"
+       for i in * .*;
+       do
+            if [ "$i" != "." -a "$i" != ".." ];
+            then
+                 echo "Handling $i"
+                 owner="$(stat --format "%U" ./$i)"
+                 if [ "${owner}" = "bandit23" ]; then
+                      timeout -s 9 60 ./$i
+                 fi
+                 rm -f ./$i
+            fi
+       done
+       ```
+     - The code navigates to the `/var/spool/bandit24/foo` directory & extracts the owner of the each & every file in that directory.
+     - If the owner of the file is `bandit23` then it executes that file with a timeout of 60 seconds, if the program doesn't complete within 60 seconds, then it sends a signal `SIGKILL` (signal number 9) to terminate it.
+     - Also, the directory `/var/spool/bandit24/foo` is writable & execuatble by any other user.
 - **Commands**:
      - `cat
 
