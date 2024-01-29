@@ -234,7 +234,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 ### Level 23
 - **Description**:
-     - This
+     - Same as the previous level, there is a cronjob running.
 - **Commands**:
      - `cat
 
