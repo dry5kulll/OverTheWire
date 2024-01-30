@@ -345,18 +345,18 @@ To begin your journey with Level 0, log in via SSH using the following command:
        ```
      - Examine each branches one by one using the `git show origin/dev` command & get the password for the next level.
 
-### Level 29
-- **Description**:
-     - This
-- **Solution**:
-     - `cat
-
-
 ### Level 30
 - **Description**:
-     - This
+     - There is a git repository at `ssh://bandit30-git@localhost/home/bandit30-git/repo` on port 2220 whose password is same as the current levels password.
 - **Solution**:
-     - `cat
+     - Follow the same steps from the previous level to clone the GitHub Repo, once cloned navigate into the repo.
+     - There is a readme.md file that will have the below content.
+       ```
+       just an epmty file... muahaha
+       ```
+     - There are no commits or branches.
+     - Enter the command `git show <TAB>` & enter the tab button to see other options associated with the command.
+     - One of the options includes `secret`. Use it to get the password for the next level.
 
 ### Level 31
 - **Description**:
