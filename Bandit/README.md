@@ -388,7 +388,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
 - **Description**:
      - This is the last level of the challenge.
 - **Solution**:
-     - Read the contents of the readme.txt file and you grab the final flag.
+     - Read the contents of the readme.txt file and grab the final flag.
        ```
        Congratulations on solving the last level of this game!
        At this moment, there are no more levels to play in this game. However, we are constantly working on new levels and will most likely expand this game with more levels soon. Keep an eye out for an announcement on our usual communication channels! In the meantime, you could play some of our other wargames.
