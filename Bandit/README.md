@@ -352,7 +352,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
      - Follow the same steps from the previous level to clone the GitHub Repo, once cloned navigate into the repo.
      - There is a readme.md file that will have the below content.
        ```
-       just an epmty file... muahaha
+       just an empty file... muahaha
        ```
      - There are no commits or branches.
      - Enter the command `git show <TAB>` & enter the tab button to see other options associated with the command.
@@ -360,18 +360,37 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 ### Level 31
 - **Description**:
-     - This
+     - There is a git repository at `ssh://bandit31-git@localhost/home/bandit31-git/repo` on port 2220 whose password is same as the current levels password.
 - **Solution**:
-     - `cat
+     - Follow the same steps from the previous level to clone the GitHub Repo, once cloned navigate into the repo.
+     - There is a readme.md file that will have the below content.
+       ```
+       This time your task is to push a file to the remote repository.
+       Details:
+            File name: key.txt
+            Content: 'May I come in?'
+            Branch: master
+       ```
+     - Create a file with the same name & content.
+     - git status - shows where branch is changed or updated
+     - git add . -f - To force add the newly created file
+     - git status - shows the changes to be committed
+     - git commit -m "File Committed" - Commits the new file changes in the local repo
+     - git push - Push the changes to the master branch
 
 ### Level 32
 - **Description**:
-     - This
+     - This time after logging in, you are send 
 - **Solution**:
-     - `cat
+     - Use `$0` to escape the restricted shell. After escaping, we are `bandit33` user. Grab its password from the `/etc/bandit_pass/bandit33` file.
 
 ### Level 33
 - **Description**:
-     - This
+     - This is the last level of the challenge.
 - **Solution**:
-     - `cat
+     - Read the contents of the readme.txt file and you grab the final flag.
+       ```
+       Congratulations on solving the last level of this game!
+       At this moment, there are no more levels to play in this game. However, we are constantly working on new levels and will most likely expand this game with more levels soon. Keep an eye out for an announcement on our usual communication channels! In the meantime, you could play some of our other wargames.
+       If you have an idea for an awesome new level, please let us know!
+       ```
