@@ -279,7 +279,7 @@ To begin your journey with Level 0, log in via SSH using the following command:
             echo "VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar $i";
        done | nc localhost 30002 | grep -vi wrong
        ```
-     - Execute the script, & wait for until it gives the password for next level.
+     - Execute the script, & wait until it gives the password for next level.
 
 ### Level 25
 - **Description**:
@@ -291,34 +291,59 @@ To begin your journey with Level 0, log in via SSH using the following command:
 
 ### Level 26
 - **Description**:
-     - This
+     - There is an executable file `bandit27-do` that has setuid bit set on it.
+     - It allows running command as another user in this case `bandit27` user as the file is owned by that user.
 - **Solution**:
-     - `cat
-
-
+     - Run `./bandit27-do id` command & you will see the following output `uid=11026(bandit26) gid=11026(bandit26) euid=11027(bandit27) groups=11026(bandit26)`.
+     - The effective uid (euid) is `bandit27`. So now you can run the command `./bandit27-do cat /etc/bandit_pass/bandit27` & get the password for the next level.
 
 ### Level 27
 - **Description**:
-     - This
+     - There is a git repository at `ssh://bandit27-git@localhost/home/bandit27-git/repo` on port 2220 whose password is same as the current levels password.
 - **Solution**:
-     - `cat
-
-
+     - Clone the git repo using the command `git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo`. Use the current levels password to clone the repo.
+     - Navigate to the cloned repo, read the readme file & get the password for the next level.
 
 ### Level 28
 - **Description**:
-     - This
+     - There is a git repository at `ssh://bandit28-git@localhost/home/bandit28-git/repo` on port 2220 whose password is same as the current levels password.
 - **Solution**:
-     - `cat
+     - Follow the same steps from the previous level to clone the GitHub Repo, once cloned navigate into the repo.
+     - There is a readme.md file that will have the below content.
+       ```
+       # Bandit Notes
+       Some notes for level29 of bandit.
 
-
+       ## credentials
+       username: bandit29
+       password: xxxxxxxxxx
+       ```
+     - Use the `git log` command to check the logs & you should see 3 commits, slong with a hash value assocaited with them.
+     - Finally, use the `git show <commit_hash>` on all those commits & grab the password for the next level.
 
 ### Level 29
 - **Description**:
-     - This
+     - There is a git repository at `ssh://bandit29-git@localhost/home/bandit29-git/repo` on port 2220 whose password is same as the current levels password.
 - **Solution**:
-     - `cat
+     - Follow the same steps from the previous level to clone the GitHub Repo, once cloned navigate into the repo.
+     - There is a readme.md file that will have the below content.
+       ```
+       # Bandit Notes
+       Some notes for bandit30 of bandit.
 
+       ## credentials
+       username: bandit30
+       password: <no passwords in production!>
+       ```
+     - Use the `git status` or `git branch` to check the current branch you are on.
+     - Use the `git branch -r` command & you will find other branches along with the master branch.
+       ```
+       origin/HEAD -> origin/master
+       origin/dev
+       origin/master
+       origin/sploits-dev
+       ```
+     - Examine each branches one by one using the `git show origin/dev` command & get the password for the next level.
 
 ### Level 29
 - **Description**:
