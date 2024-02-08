@@ -372,11 +372,11 @@ To begin your journey with Level 0, log in via SSH using the following command:
             Branch: master
        ```
      - Create a file with the same name & content.
-     - git status - shows where branch is changed or updated
-     - git add . -f - To force add the newly created file
-     - git status - shows the changes to be committed
-     - git commit -m "File Committed" - Commits the new file changes in the local repo
-     - git push - Push the changes to the master branch
+     - `git status` - shows where branch is changed or updated
+     - `git add . -f` - To force add the newly created file
+     - `git status` - shows the changes to be committed
+     - `git commit -m "File Committed"` - Commits the new file changes in the local repo
+     - `git push` - Push the changes to the master branch
 
 ### Level 32
 - **Description**:
@@ -391,6 +391,8 @@ To begin your journey with Level 0, log in via SSH using the following command:
      - Read the contents of the readme.txt file and grab the final flag.
        ```
        Congratulations on solving the last level of this game!
-       At this moment, there are no more levels to play in this game. However, we are constantly working on new levels and will most likely expand this game with more levels soon. Keep an eye out for an announcement on our usual communication channels! In the meantime, you could play some of our other wargames.
+       At this moment, there are no more levels to play in this game.
+       However, we are constantly working on new levels and will most likely expand this game with more levels soon.
+       Keep an eye out for an announcement on our usual communication channels! In the meantime, you could play some of our other wargames.
        If you have an idea for an awesome new level, please let us know!
        ```
